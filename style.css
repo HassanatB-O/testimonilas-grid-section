@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 81%);
+    display: flex;
+    justify-content: center;
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+#container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 40% 40%;
+    grid-column-gap: 50px;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+}
+#item-1{
+    width: 450px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: none;
+    background-color: hsl(263, 55%, 52%);
+    border-radius: 8px;
+    padding: 20px;
+    color: hsl(0, 0%, 81%);
+    align-self: flex-start;
+}
+#item-2{
+    width: 300px;
+    grid-column: 2;
+    height: 240px;    
+    border: none;
+    background: hsl(217, 19%, 35%);
+    border-radius: 8px;
+    padding: 20px;
+    color: hsl(0, 0%, 81%);
+    align-self: flex-start;
+}
+#item-3{
+    width: 200px;
+    height: 570px;
+    border: none;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    padding: 20px;
+    color: hsl(217, 19%, 35%);
+    justify-self: end;
+}
+#item-4{
+    width: 300px;
+    height: 230px;
+    border: none;
+    background: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    padding: 20px;
+    color: hsl(217, 19%, 35%);
+    justify-self: flex-start;
+}
+#item-5{
+    width: 400px;
+    height: fit-content;
+    border: none;
+    background-color: hsl(219, 29%, 14%);
+    border-radius: 8px;
+    padding: 20px;
+    color: hsl(0, 0%, 81%);
+}
+#description{
+    font-weight: 600;
+}
+#quote{
+    font-weight: 500;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+#grad{
+    opacity: 0.5;
+    margin-left: 10px;
+}
+#profile{
+    display: flex;
+}
+#name{
+    margin-left: 10px;
+}
+#image{
+    border-radius: 50%;
+}
+@media screen and (max-width: 800px){
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    #item-1, #item-2, #item-3, #item-4, #item-5{
+        width: fit-content;
+        height: fit-content;
+        margin: 20px;
+    }
+    #item-1{
+        order: 1;
+    }    
+    #item-2{
+        order: 2;
+    }
+    #item-3{
+        order: 5;
+    }
+    #item-4{
+        order: 3;
+    }
+    #item-5{
+        order: 4;
+    }
+}
